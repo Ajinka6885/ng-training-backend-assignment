@@ -1,0 +1,8 @@
+Todo-list backend application
+
++ Run the following command to start your Express server: 
+node server.js
++ Ensure that the server is running without any errors.
++To test the functionality i used Postman and Mocha.
+
+- Ajinkya Shitole
