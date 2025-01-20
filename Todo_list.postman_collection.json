@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "8b3deafb-c61b-44d8-aa0a-6027790c97aa",
+		"name": "Todo_list",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38453699"
+	},
+	"item": [
+		{
+			"name": "Retrive",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "# Get Tasks\n\nThis endpoint is used to retrieve a list of tasks.\n\n### Request\n\n`GET /api/tasks`\n\n### Response\n\n- Status: 200,ok\n    \n- Content-Type: text/xml\n    \n- Body:\n    \n\n\\[  \n{  \n\"_id\": \"60c72b2f9b1d8e001c8e4b8a\",  \n\"title\": \"Task Title\",  \n\"description\": \"Task Description\",  \n\"status\": \"Pending\",  \n\"**v\": 0  \n},  \n{  \n\"_id\": \"60c72b2f9b1d8e001c8e4b8b\",  \n\"title\": \"Another Task\",  \n\"description\": \"Another Description\",  \n\"status\": \"Completed\",  \n\"**v\": 0  \n}  \n\\]"
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "### Add Task\n\nThis endpoint allows the user to add a new task.\n\n#### Request Body\n\n- title (text, required): The title of the new task.\n    \n- description (text, required): The description of the new task.\n    \n- status (text, required): The status of the new task.\n    \n\n#### Response\n\n- Status: 200,ok\n    \n- Content-Type: text/xml\n    \n- Response Body: {  \n    \"_id\": \"60c72b2f9b1d8e001c8e4b8a\",  \n    \"title\": \"New Task\",  \n    \"description\": \"This is a new task\",  \n    \"status\": \"pending\",  \n    \"__v\": 0  \n    }"
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "### Update Task\n\nThis endpoint allows the user to update a specific task by sending an HTTP PUT request to the specified URL.\n\n#### Request Body\n\n- title (text, required): The updated title of the task.\n    \n- description (text, required): The updated description of the task.\n    \n- status (text, required): The updated status of the task.\n    \n\n#### Response\n\n{  \n\"_id\": \"6885\",  \n\"title\": \"Updated Task\",  \n\"description\": \"This task has been updated\",  \n\"status\": \"completed\",  \n\"__v\": 0  \n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "### Delete Task\n\nThis endpoint is used to delete a specific task by its ID.\n\n#### Request Body\n\nThis endpoint does not require a request body.\n\n#### Response\n\n- Status: 200,ok\n    \n- Content-Type: text/xml\n    \n\n#### Response **body**\n\n{  \n\"message\": \"Task deleted\"  \n}"
+			},
+			"response": []
+		}
+	]
+}
